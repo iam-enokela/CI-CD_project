@@ -25,8 +25,6 @@ To get started with this CI/CD pipeline, follow these steps:
 The following tools and technologies are used in this project:
 - **GitHub Actions**: For automating the workflows.
 - **Docker**: For containerizing applications.
-- **Jenkins**: For orchestrating the CI/CD processes.
-- **Kubernetes**: For deploying applications in a cloud environment.
 
 ## Pipeline Workflow
 1. **Code Commit**: Developers commit code changes to the repository.
@@ -35,7 +33,7 @@ The following tools and technologies are used in this project:
 4. **Deploy**: The application is deployed to a staging or production environment.
 
 ## Deployment
-Deployment can be achieved to various environments using Kubernetes. Ensure that your cluster is configured appropriately before deploying.
+Deployment is achieved using Docker containers. Ensure that your Docker environment is configured appropriately before deploying.
 
 ## Testing
 Automated tests are defined in the `/tests` directory. To run these tests, use the following command:
