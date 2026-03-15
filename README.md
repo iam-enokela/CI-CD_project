@@ -147,6 +147,10 @@ To create a Docker Hub token: **hub.docker.com → Account Settings → Security
 - Inter-container networking (Flask reaching Redis by service name)
 - Volume-less in-memory persistence with Redis
 
+**Docker Image Optimisation**
+- Used `python:3.11-slim` as the base image to reduce image size compared to the full Python image
+- Aware of further optimisation strategies including multi-stage builds and distroless images (e.g. `gcr.io/distroless/python3`) which remove the shell and package manager entirely for smaller, more secure production images
+
 **CI/CD**
 - Automated pipeline triggered on push to `main`
 - Health check testing before publishing
@@ -185,6 +189,7 @@ docker run -p 8080:5000 enokela12/myapp:latest
 - [ ] Add Nginx as a reverse proxy layer
 - [ ] Swap Redis for PostgreSQL with persistent volumes
 - [ ] Add Prometheus + Grafana monitoring
+- [ ] Rebuild with multi-stage distroless image for improved security and smaller footprint
 
 ---
 
